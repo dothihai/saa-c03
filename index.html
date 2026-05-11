@@ -310,7 +310,7 @@
     <div class="container">
         <div class="header">
             <h1>🧠 AWS Certified AI Practitioner Quiz</h1>
-            <p>Test your knowledge with AIF-C01 practice questions</p>
+            <p>Test your knowledge with SAA-C03 practice questions</p>
         </div>
         
         <div class="view-toggle">
@@ -372,7 +372,7 @@
         const questionDataRes = (function() {
             try {
                 const xhr = new XMLHttpRequest();
-                xhr.open('GET', 'qa.json', false); // synchronous
+                xhr.open('GET', 'saa_c03.json', false); // synchronous
                 xhr.send(null);
                 if (xhr.status === 200) {
                     return JSON.parse(xhr.responseText);
@@ -416,9 +416,9 @@
             answered: new Set()
         };
 
-        const STORAGE_KEY = 'aifc01-current-question-id';
-        const FAV_STORAGE_KEY = 'aifc01-favorites';
-        const VIEW_MODE_STORAGE_KEY = 'aifc01-view-mode';
+        const STORAGE_KEY = 'saac03-current-question-id';
+        const FAV_STORAGE_KEY = 'saac03-favorites';
+        const VIEW_MODE_STORAGE_KEY = 'saac03-view-mode';
 
         function initQuiz() {
             try {
